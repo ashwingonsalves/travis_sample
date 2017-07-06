@@ -10,7 +10,7 @@ caps["os_version"] = "10"
 caps["browserstack.debug"] = "true"
 caps["build"] = ENV['BS_AUTOMATE_BUILD']
 caps["project"] = ENV['BS_AUTOMATE_PROJECT']
-caps["name"] = "Sample Test"
+caps["name"] = "Sample Travis Test"
 
 driver = Selenium::WebDriver.for(:remote,
   :url => "http://"+ENV['BROWSERSTACK_USER']+":"+ENV['BROWSERSTACK_ACCESS_KEY']+"@hub.browserstack.com/wd/hub",
@@ -21,4 +21,3 @@ element.send_keys "BrowserStack"
 element.submit
 puts driver.title
 driver.quit
-
